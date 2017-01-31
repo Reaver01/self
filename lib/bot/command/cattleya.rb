@@ -1,16 +1,14 @@
 module Commands
   # Command Module
-  module Ping
+  module Catt
     extend Discordrb::Commands::CommandContainer
     command(
-      :ping,
+      :catt,
       help_available: false,
       permission_level: 999
     ) do |event|
-      event.message.edit(
-        "Pong! : #{((Time.now - event.timestamp) * 1000).to_i}ms"
-      )
-      command_log('ping', event.user.name)
+      event.message.edit('https://github.com/Reaver01/Cattleya')
+      command_log('cattleya', event.user.name)
       nil
     end
   end

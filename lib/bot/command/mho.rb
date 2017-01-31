@@ -1,16 +1,14 @@
 module Commands
   # Command Module
-  module Ping
+  module Mho
     extend Discordrb::Commands::CommandContainer
     command(
-      :ping,
+      :mho,
       help_available: false,
       permission_level: 999
     ) do |event|
-      event.message.edit(
-        "Pong! : #{((Time.now - event.timestamp) * 1000).to_i}ms"
-      )
-      command_log('ping', event.user.name)
+      event.message.edit('https://github.com/mhonline/mhonline.github.io')
+      command_log('mho', event.user.name)
       nil
     end
   end
