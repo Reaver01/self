@@ -24,7 +24,7 @@ Commands.constants.each do |x|
   BOT.include! Commands.const_get x
 end
 # Load outside event module
-# BOT.include! Events
+BOT.include! Events
 # Turn off discordrb debugging
 BOT.debug = false
 # Set run to async
