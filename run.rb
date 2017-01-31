@@ -1,5 +1,4 @@
 require 'bundler/setup'
-require 'active_support'
 require 'date'
 require 'discordrb'
 require 'discordrb/data'
@@ -9,7 +8,6 @@ require 'rufus-scheduler'
 require 'sys/uptime'
 require 'time'
 require 'time_difference'
-require 'titleize'
 include Sys
 Dir['lib/bot/class/*.rb'].each { |file| require_relative file }
 Dir['lib/bot/method/*.rb'].each { |file| require_relative file }
