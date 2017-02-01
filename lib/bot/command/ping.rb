@@ -5,7 +5,8 @@ module Commands
     command(
       :ping,
       help_available: false,
-      permission_level: 999
+      permission_level: 999,
+      permission_message: false
     ) do |event|
       event.message.edit(
         "Pong! : #{((Time.now - event.timestamp) * 1000).to_i}ms"

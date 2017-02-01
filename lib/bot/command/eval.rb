@@ -5,7 +5,8 @@ module Commands
     command(
       :eval,
       help_available: false,
-      permission_level: 999
+      permission_level: 999,
+      permission_message: false
     ) do |event, *code|
       command_log('eval', event.user.name)
       begin

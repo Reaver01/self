@@ -5,7 +5,8 @@ module Commands
     command(
       :catt,
       help_available: false,
-      permission_level: 999
+      permission_level: 999,
+      permission_message: false
     ) do |event|
       event.message.edit('https://github.com/Reaver01/Cattleya')
       command_log('cattleya', event.user.name)

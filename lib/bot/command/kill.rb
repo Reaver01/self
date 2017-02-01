@@ -5,7 +5,8 @@ module Commands
     command(
       :kill,
       help_available: false,
-      permission_level: 999
+      permission_level: 999,
+      permission_message: false
     ) do |_event|
       File.open('botfiles/logs.json', 'w') { |f| f.write $logs.to_json }
       File.open('botfiles/settings.json', 'w') { |f| f.write $settings.to_json }

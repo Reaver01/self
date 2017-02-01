@@ -5,7 +5,8 @@ module Commands
     command(
       :felyne,
       help_available: false,
-      permission_level: 999
+      permission_level: 999,
+      permission_message: false
     ) do |event|
       event.message.edit('https://github.com/mhonline/Felyne-bot')
       command_log('felyne', event.user.name)

@@ -5,7 +5,8 @@ module Commands
     command(
       :wiki,
       help_available: false,
-      permission_level: 999
+      permission_level: 999,
+      permission_message: false
     ) do |event, list, *search|
       wikilinks = [
         'armor', 'cats', 'crafting', 'faq', 'food', 'gathering', 'hunter-set',

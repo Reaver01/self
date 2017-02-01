@@ -5,7 +5,8 @@ module Commands
     command(
       :afk,
       help_available: false,
-      permission_level: 999
+      permission_level: 999,
+      permission_message: false
     ) do |event|
       if $settings.key?('afk')
         if $settings['afk']

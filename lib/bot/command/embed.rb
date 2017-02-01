@@ -5,7 +5,8 @@ module Commands
     command(
       :embed,
       help_available: false,
-      permission_level: 999
+      permission_level: 999,
+      permission_message: false
     ) do |event, title, *content|
       content = content.join(' ')
       e = embed(title, content)
