@@ -9,13 +9,14 @@ $settings = load_json('botfiles/settings.json')
 SCHEDULER = Rufus::Scheduler.new
 PREFIX = '.'.freeze
 # Load the bot constant
-BOT = Discordrb::Commands::CommandBot.new type: :user,
-                                          token: ENV['TOKEN'],
-                                          prefix: PREFIX,
-                                          advanced_functionality: false,
+BOT = Discordrb::Commands::CommandBot.new advanced_functionality: false,
+                                          help_command: false,
                                           ignore_bots: false,
+                                          log_mode: :quiet,
                                           parse_self: true,
-                                          log_mode: :quiet
+                                          prefix: PREFIX,
+                                          token: ENV['TOKEN'],
+                                          type: :user
 # Load all permissions from file
 BOT.set_user_permission(150_278_590_494_277_632, 999)
 puts "[#{Time.now.strftime('%d %a %y | %H:%M:%S')}][STARTUP] Permission Loaded!"
