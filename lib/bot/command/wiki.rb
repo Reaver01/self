@@ -4,9 +4,8 @@ module Commands
     extend Discordrb::Commands::CommandContainer
     command(
       :wiki,
-      bucket: :delay10,
-      description: 'Searches the Wiki',
-      usage: 'wiki <search>'
+      help_available: false,
+      permission_level: 999
     ) do |event, list, *search|
       wikilinks = [
         'armor', 'cats', 'crafting', 'faq', 'food', 'gathering', 'hunter-set',
