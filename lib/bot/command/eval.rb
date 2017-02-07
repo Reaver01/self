@@ -15,5 +15,31 @@ module Commands
         event.message.edit(e.to_s)
       end
     end
+    command(
+      :evalb,
+      help_available: false,
+      permission_level: 999,
+      permission_message: false
+    ) do |event, *code|
+      command_log('eval', event.user.name)
+      begin
+        event.message.edit('```bash\n' + eval code.join(' ') + '```')
+      rescue StandardError => e
+        event.message.edit(e.to_s)
+      end
+    end
+    command(
+      :evalr,
+      help_available: false,
+      permission_level: 999,
+      permission_message: false
+    ) do |event, *code|
+      command_log('eval', event.user.name)
+      begin
+        event.message.edit('```ruby\n' + eval code.join(' ') + '```')
+      rescue StandardError => e
+        event.message.edit(e.to_s)
+      end
+    end
   end
 end
