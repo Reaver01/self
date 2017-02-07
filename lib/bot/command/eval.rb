@@ -23,7 +23,7 @@ module Commands
     ) do |event, *code|
       command_log('eval', event.user.name)
       begin
-        event.message.edit('```bash\n' + eval code.join(' ') + '```')
+        event.message.edit("```bash\n" + eval code.join(' ') + '```')
       rescue StandardError => e
         event.message.edit(e.to_s)
       end
@@ -36,7 +36,7 @@ module Commands
     ) do |event, *code|
       command_log('eval', event.user.name)
       begin
-        event.message.edit('```ruby\n' + eval code.join(' ') + '```')
+        event.message.edit("```bash\n" + eval code.join(' ') + '```')
       rescue StandardError => e
         event.message.edit(e.to_s)
       end
