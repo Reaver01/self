@@ -3,7 +3,7 @@ module Commands
   module Eval
     extend Discordrb::Commands::CommandContainer
     command(
-      :eval,
+      [:eval, :e],
       help_available: false,
       permission_level: 999,
       permission_message: false
